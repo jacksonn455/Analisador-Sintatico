@@ -1,4 +1,4 @@
-Programa para matéria de Linguagens formais
+Programa para matéria de Compiladores
 ===============================================
 
 - Implementação de um Analisador Sintático para a disciplina de Compiladores.
@@ -12,4 +12,4 @@ Programa para matéria de Linguagens formais
   | :---: |
 
 --------------------
- ![](https://github.com/jacksonn455/Analizador-Lexico/blob/master/programa2.png)
+ ![](https://github.com/jacksonn455/Analisador-Sintatico/blob/main/demo.png)
