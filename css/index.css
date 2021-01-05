@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+body,
+html {
+    background: linear-gradient(#4B088A 30%, #9370DB);
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+    width: 100%;
+}
+
+.bt-group button {
+    height: 2.5rem;
+    background-color: #9370DB !important;
+    color: white !important;
+}
+
+.bt-group button:hover {
+    background-color: #4B088A !important;
+    color: white !important;
+}
+
+.button-end button {
+    height: 2.5rem;
+    background-color: #9370DB!important;
+    color: white !important;
+}
+
+.button-end button:hover {
+    background-color: #4B088A !important;
+    color: white !important;
+}
+
+.lbl-entry-point {
+    color: white;
+}
+
+.bt-group {
+    position: relative;
+    left: 10rem;
+}
+
+.title-dp {
+    font-size: 1.2rem;
+}
+
+.li-down {
+    color: white;
+}
+
+.li-buck {
+    color: white;
+}
+
+.li-down:hover {
+    color: #00c251;
+}
+
+.li-buck:hover {
+    color: #076adb
+}
+
+.div-ul-dp {
+    padding: 2rem;
+}
+
+.ul-dev {
+    font-size: 1.1rem;
+    list-style-type: none
+}
+
+.ul-rep {
+    font-size: 1.1rem;
+    list-style-type: none
+}
+
+.arrow {
+    position: absolute;
+    right: 20px;
+    top: -23px;
+    color: #2d2d2c;
+}
+
+.div-img {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.div-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-size: cover
+}
+
+.header-title {
+    position: relative;
+    top: 0.5rem;
+    left: 1rem;
+    width: 30rem;
+    color: black;
+}
+
+.drop-div {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.letter-select {
+    color: #2d2d2c !important;
+    background-color: #09a803 !important;
+}
+
+.letter-select-error {
+    color: #2d2d2c !important;
+    background-color: #aa0000 !important;
+}
+
+.pagination-div {
+    margin-left: 1rem;
+}
+
+.button-end {
+    padding-top: 1.1rem;
+}
+
+.pagination-div ul li a {
+    font-weight: bold !important;
+    background-color: #9370DB;
+    color: white;
+}
+
+.stack {
+    border: none !important;
+}
+
+.head-table {
+    background-color: #2d2d2c;
+    color: white;
+}
+
+.body-table {
+    background-color: #9370DB;
+    color: white;
+    font-weight: bold !important;
+}
+
+.pagination-div ul li a:hover {
+    background-color: #9370DB;
+    color: white;
+}
+
+.tr-table {
+    background-color: #2d2d2c !important;
+    color: white !important;
+    text-align: center;
+}
+
+.td-none:hover {
+    background-color: #9370DB!important;
+    cursor: pointer;
+}
+
+.td-start:hover {
+    background-color: #9370DB!important;
+    cursor: pointer;
+}
+
+.td-end:hover {
+    background-color: #9370DB!important;
+    cursor: pointer;
+}
+
+.tr-table th {
+    border: 1px solid white !important;
+}
+
+.td-none {
+    border-top: none !important;
+}
+
+.td-col {
+    border-right: 1px solid white !important;
+}
+
+.td-start {
+    border-top: 1px solid white !important;
+}
+
+.td-end {
+    border-top: none !important;
+    border-bottom: 1px solid white !important;
+}
+
+.tr-init {
+    border: 1px solid white !important;
+    background-color: #9370DB !important;
+    color: white !important;
+    font-weight: bolder !important;
+}
+
+.painel-table {
+    border: 1px solid white !important;
+    box-shadow: none !important;
+}
+
+.botao:hover {
+    background-color: #79ff4d !important;
+}

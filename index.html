@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Analisador Sintático</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/google-fonts.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container caixa">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img class="foto-perfil" src="img/img.png" alt="Foto de perfil do Jackson Felipe Magnabosco">
+                </div>
+
+                <div class="col-lg-6">
+                    <h1 class="titulo-nome">Analisador Sintático</h1>
+                </div>
+            </div>
+    </header>
+
+    <main>
+        <section class="projeto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <table class="table">
+                            <thead>
+                                <tr class="tr-init">
+                                    <th style="text-align: center;">Gramática</th>
+                                    <th style="text-align: center;"></th>
+                                    <th style="text-align: center;"></th>
+                                    <th style="text-align: center;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-table">
+                                    <th scope="row">S::=</th>
+                                    <td class="td-start">aAb</td>
+                                    <td class="td-start">bB</td>
+                                    <td class="td-start td-col">-</td>
+                                </tr>
+                                <tr class="tr-table">
+                                    <th scope="row">A::=</th>
+                                    <td class="td-none">bCc</td>
+                                    <td class="td-none">-</td>
+                                    <td class="td-none td-col">-</td>
+                                </tr class="tr-table">
+                                <tr class="tr-table">
+                                    <th scope="row">B::=</th>
+                                    <td class="td-none">aCb</td>
+                                    <td class="td-none">cSb</td>
+                                    <td class="td-none td-col">E</td>
+                                </tr>
+                                <tr class="tr-table">
+                                    <th scope="row">C::=</th>
+                                    <td class="td-end">aA</td>
+                                    <td class="td-end">c</td>
+                                    <td class="td-end td-col">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="nav nav-list firstFollow">
+                            <table class="table">
+                                <thead>
+                                    <tr class="tr-init">
+                                        <th style="text-align: center;">-</th>
+                                        <th style="text-align: center;">First</th>
+                                        <th style="text-align: center;">Follows</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tr-table">
+                                        <th><b>S</b></th>
+                                        <td class="td-none">
+                                            <h6>[a, b]
+                                            </h6>
+                                        </td>
+                                        <td class="td-none td-col">
+                                            <h6>[$, b]
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-table">
+                                        <th><b>A</b></th>
+                                        <td class="td-none">
+                                            <h6>[b]
+                                            </h6>
+                                        </td>
+                                        <td class="td-none td-col">
+                                            <h6>[b, c]
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-table">
+                                        <th><b>B</b></th>
+                                        <td class="td-none">
+                                            <h6>[a, c, E]
+                                            </h6>
+                                        </td>
+                                        <td class="td-none td-col">
+                                            <h6>[b, $]
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-table">
+                                        <th><b>C</b></th>
+                                        <td class="td-end">
+                                            <h6>[a, c]
+                                            </h6>
+                                        </td>
+                                        <td class="td-end td-col">
+                                            <h6>[c, b]
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr class="tr-init">
+                                        <th>Tabela</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr class="tr-table">
+                                        <th>#</th>
+                                        <th>a</th>
+                                        <th>b</th>
+                                        <th>c</th>
+                                        <th>$</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tr-table">
+                                        <th scope="row">S</th>
+                                        <td class="td-start" id="Sa">S->aAb</td>
+                                        <td class="td-start" id="Sb">S->bB</td>
+                                        <td class="td-start">-</td>
+                                        <td class="td-start td-col">-</td>
+                                    </tr>
+                                    <tr class="tr-table">
+                                        <th scope="row">A</th>
+                                        <td class="td-none">-</td>
+                                        <td class="td-none" id="Ab">A->bCc</td>
+                                        <td class="td-none">-</td>
+                                        <td class="td-none td-col">-</td>
+                                    </tr>
+                                    <tr class="tr-table">
+                                        <th scope="row">B</th>
+                                        <td class="td-none" id="Ba">B->aCb</td>
+                                        <td class="td-none" id="Bb">B->E</td>
+                                        <td class="td-none" id="Bc">B->cSb</td>
+                                        <td class="td-none td-col" id="B$">B->E</td>
+                                    </tr>
+                                    <tr class="tr-table">
+                                        <th scope="row">C</th>
+                                        <td class="td-end" id="Ca">C->aA</td>
+                                        <td class="td-end">-</td>
+                                        <td class="td-end" id="Cc">C->c</td>
+                                        <td class="td-end td-col">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="margin-bottom: 3rem;">
+                        <div style="width: 24rem; padding-bottom: 1rem;">
+                            <label class="lbl-entry-point" for="entry-point"><b>Sentença</b>:</label>
+                            <input id="entry-point" type="text" class="form-control" placeholder="Escreva a sentença ou gere uma">
+                        </div>
+
+                        <div class="btn-group bt-group" role="group" aria-label="Basic example">
+                            <button id="bt-generate" type="button" class="btn btn-secondary"> <i class="fa fa-plus"
+									aria-hidden="true"></i> <b>Gerar</b></button>
+                            <button id="bt-auto-complete" type="button" class="btn btn-secondary"><i class="fa fa-refresh"
+									aria-hidden="true"></i> <b>Rodar</b> </button>
+                            <button id="bt-clear" type="button" class="btn btn-secondary"> <i class="fa fa-trash"
+									aria-hidden="true"></i>
+								<b>Limpar</b></button>
+                        </div>
+                    </div>
+
+                    <div id="div-magic" style="display: none;">
+
+                        <div class="panel panel-default stack">
+                            <table class="table">
+                                <thead class="head-table">
+                                    <tr>
+                                        <th>Pilha</th>
+                                        <th>Entrada</th>
+                                        <th>Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="stack-table" class="body-table">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row" style="margin-bottom: 3rem;">
+                            <div class="button-end">
+                                <button id="bt-enter" type="button" class="btn btn-secondary"><i class="fa fa-paper-plane"
+										aria-hidden="true"></i> <b>Avançar</b></button>
+                            </div>
+                            <div class="pagination-div">
+                                <ul id="stack-pagination" class="pagination"></ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <address>
+							<strong>Compiladores</strong><br>
+							Jackson Felipe Magnabosco<br>
+							URI, Erechim - <strong>2021</strong><br>
+							<address>Email:jacksonmagnabosco@hotmail.com</address><br>
+                </address>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
