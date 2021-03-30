@@ -11,12 +11,39 @@ header {
     margin: 0 auto;
 }
 
-.titulo-nome {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
-    margin-top: 120px;
-    margin-bottom: 20px;
-    color: #A020F0;
+
+.name {
+  border-right: 5px solid;
+  color: #A020F0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.name{
+  animation: blinkCursor 500ms steps(20) infinite,
+    name 4s steps(20) 1s normal both;
+}
+
+@keyframes name {
+  from {
+    width: 0;
+  }
+  to {
+   width: 330px;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: #A020F0;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 .projeto {
