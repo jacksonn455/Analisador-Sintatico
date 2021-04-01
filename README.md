@@ -4,6 +4,7 @@ Programa para matéria de Compiladores
 - Implementação de um Analisador Sintático para a disciplina de Compiladores.
 
 - Acesso em: https://jacksonn455.github.io/Analisador-Sintatico/
+- Confira também o Analisador Léxico, Acesso em: https://jacksonn455.github.io/Analisador-Lexico/
 
 - [Trabalho](https://github.com/jacksonn455/Analisador-Sintatico/blob/main/Trabalho%20compiladores%20-%20Analisador%20Sint%C3%A1tico%20-%20Jackson.pdf)
 
