@@ -21,11 +21,15 @@
         <div class="container caixa">
             <div class="row">
                 <div class="col-lg-6">
-                    <img class="foto-perfil" src="img/img.png" alt="Foto de perfil do Jackson Felipe Magnabosco">
+                    <div class="card">
+                        <img class="foto-perfil" src="img/img.png" alt="Foto de perfil do Jackson Felipe Magnabosco">
+                    </div>
                 </div>
 
                 <div class="col-lg-6">
-                    <h1 class="name">Analisador Sintático</h1>
+                    <section>
+                        <h1 class="text name">Analisador Sintático</h1>
+                    </section>
                 </div>
             </div>
     </header>
@@ -190,17 +194,18 @@
                     <div style="margin-bottom: 3rem;">
                         <div style="width: 24rem; padding-bottom: 1rem;">
                             <label class="lbl-entry-point" for="entry-point"><b>Sentença</b>:</label>
-                            <input id="entry-point" type="text" class="form-control" placeholder="Escreva a sentença ou gere uma">
+                            <input id="entry-point" type="text" class="form-control"
+                                placeholder="Escreva a sentença ou gere uma">
                         </div>
 
                         <div class="btn-group bt-group" role="group" aria-label="Basic example">
                             <button id="bt-generate" type="button" class="btn btn-secondary"> <i class="fa fa-plus"
-									aria-hidden="true"></i> <b>Gerar</b></button>
-                            <button id="bt-auto-complete" type="button" class="btn btn-secondary"><i class="fa fa-refresh"
-									aria-hidden="true"></i> <b>Rodar</b> </button>
+                                    aria-hidden="true"></i> <b>Gerar</b></button>
+                            <button id="bt-auto-complete" type="button" class="btn btn-secondary"><i
+                                    class="fa fa-refresh" aria-hidden="true"></i> <b>Rodar</b> </button>
                             <button id="bt-clear" type="button" class="btn btn-secondary"> <i class="fa fa-trash"
-									aria-hidden="true"></i>
-								<b>Limpar</b></button>
+                                    aria-hidden="true"></i>
+                                <b>Limpar</b></button>
                         </div>
                     </div>
 
@@ -221,8 +226,8 @@
                         </div>
                         <div class="row" style="margin-bottom: 3rem;">
                             <div class="button-end">
-                                <button id="bt-enter" type="button" class="btn btn-secondary"><i class="fa fa-paper-plane"
-										aria-hidden="true"></i> <b>Avançar</b></button>
+                                <button id="bt-enter" type="button" class="btn btn-secondary"><i
+                                        class="fa fa-paper-plane" aria-hidden="true"></i> <b>Avançar</b></button>
                             </div>
                             <div class="pagination-div">
                                 <ul id="stack-pagination" class="pagination"></ul>
@@ -237,15 +242,25 @@
         <footer>
             <div class="container">
                 <address>
-							<strong>Compiladores</strong><br>
-							Jackson Felipe Magnabosco<br>
-							URI, Erechim - <strong>2021</strong><br>
-							<address>Email:jacksonmagnabosco@hotmail.com</address><br>
+                    <strong>Compiladores</strong><br>
+                    Jackson Felipe Magnabosco<br>
+                    URI, Erechim - <strong>2021</strong><br>
+                    <address>Email:jacksonmagnabosco@hotmail.com</address><br>
                 </address>
             </div>
         </footer>
     </main>
+    <script>
+        const text = document.querySelector(".text");
+        text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
 
+        const letters = document.querySelectorAll("span");
+        for (let i = 0; i < letters.length; i++) {
+            letters[i].addEventListener("mouseover", function () {
+                letters[i].classList.add("active");
+            });
+        }
+    </script>
     <script src="js/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
