@@ -6,7 +6,7 @@ Programa para matéria de Compiladores
 - Acesso em: https://jacksonn455.github.io/Analisador-Sintatico/
 - Confira também o Analisador Léxico, Acesso em: https://jacksonn455.github.io/Analisador-Lexico/
 - Curta o jogo criado com Analisador Léxico: https://jacksonn455.github.io/automato-typer/
-- [Trabalho](https://github.com/jacksonn455/Analisador-Sintatico/blob/main/Trabalho%20compiladores%20-%20Analisador%20Sint%C3%A1tico%20-%20Jackson.pdf)
+- [Trabalho](https://github.com/jacksonn455/Analisador-Sintatico/blob/main/Trabalho%20compiladores%202021%20-%20Analisador%20Sint%C3%A1tico%20-%20Jackson.pdf)
 
 
 ## Autor
